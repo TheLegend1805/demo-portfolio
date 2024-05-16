@@ -1,0 +1,103 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 70px; /*margin of 20px top & bottom while 170px both left & ryt*/
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+  font-size: 20px;
+}
+
+.navbar-img {
+  width: 130px;
+  cursor: pointer;
+}
+
+.nav-connect {
+  padding: 20px 40px;
+  border-radius: 60px;
+  background: linear-gradient(160deg, #da7c25, #ff0101);
+  /*creates background mixture of colors of orange @top and purple @bottom slanting from top ryt to bottom left @160deg*/
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+.nav-connect:hover {
+  transform: scale(1.05);
+  /*element will be scaled up by 5% in both width and height wrt its original size*/
+}
+
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  cursor: pointer;
+}
+
+.nav-menu li img {
+  display: flex;
+  margin: auto;
+}
+
+.anchor-link {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-mob-close {
+  display: none;
+}
+
+.nav-mob-open {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    margin: 20px 50px;
+  }
+  .nav-connect {
+    display: none;
+  }
+  .nav-mob-open {
+    display: block;
+    position: fixed;
+    right: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
+  .nav-mob-close {
+    display: flex;
+    position: relative;
+    top: 30px;
+    left: 80px;
+    width: 20px;
+    cursor: pointer;
+  }
+  .nav-menu {
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    top: 0;
+    background-color: #2c2c2c;
+    width: 220px;
+    height: fit-content;
+    z-index: 2;
+    transition: right 0.5s;
+    right: -300px;
+  }
+  .nav-menu li {
+    font-size: 20px;
+    padding: 8px;
+    flex-direction: row;
+    gap: 20px;
+    margin: 2px;
+  }
+}
